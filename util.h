@@ -12,21 +12,36 @@
  */
 template <typename T>
 std::set<T> setIntersection(std::set<T>& s1, std::set<T>& s2)
-{
-
-
-
-
-
+{   //only one iterator needed for this
+    typename std::set<T>::iterator iter1;
+    std::set<T> toReturn;
+    //loop through one set
+    for (iter1 = s1.begin(); iter1 != s1.end(); iter1++){
+        T t = *iter1;
+        //if there is a common product
+        if(s2.find(t) != s2.end()) {
+            //insert it in the set
+            toReturn.insert(t);
+        }
+    }
+    return toReturn;
 }
 template <typename T>
 std::set<T> setUnion(std::set<T>& s1, std::set<T>& s2)
-{
-
-
-
-
-
+{   //declare iterators
+    typename std::set<T>::iterator iter1;
+    typename std::set<T>::iterator iter2;
+    std::set<T> toReturn;
+    //set does not allow duplicates so can insert all elements from both sets
+    for (iter1 = s1.begin(); iter1 != s1.end(); iter1++){
+        T t = *iter1;
+        toReturn.insert(t);
+    }
+    for (iter2 = s2.begin(); iter2 != s2.end(); iter2++){
+        T t = *iter2;
+        toReturn.insert(t);
+    }
+    return toReturn;
 }
 
 /***********************************************/
