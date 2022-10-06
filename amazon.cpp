@@ -29,7 +29,7 @@ int main(int argc, char* argv[])
      * Declare your derived DataStore object here replacing
      *  DataStore type to your derived type
      ****************/
-    DataStore ds;
+    MyDataStore ds;
 
 
 
@@ -99,7 +99,16 @@ int main(int argc, char* argv[])
                 }
                 done = true;
             }
-	    /* Add support for other commands here */
+	    			else if (cmd == "ADD"){
+
+            }
+            else if (cmd == "VIEWCART"){
+
+            }
+                /* Add support for other commands here */
+            else if (cmd == "BUYCART"){
+
+            }
 
 
 

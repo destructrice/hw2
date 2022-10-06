@@ -9,7 +9,8 @@ all: amazon
 
 amazon: $(OBJS)
 	$(CXX) $(CXXFLAGS) $(DEFS) -o $@ $(OBJS)
-
+mydatastore.o: mydatastore.cpp mydatastore.h 
+	$(CXX) $(CXXFLAGS) $(DEFS) -o $@ -c mydatastore.cpp
 user.o: user.cpp user.h 
 	$(CXX) $(CXXFLAGS) $(DEFS) -o $@ -c user.cpp
 product.o: product.cpp product.h 
